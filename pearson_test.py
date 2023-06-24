@@ -117,3 +117,6 @@ residuos = y - y_pred
 erro_padrao_estimativa = np.sqrt(np.sum(residuos**2) / (len(y) - 2))
 
 print(erro_padrao_estimativa)
+
+
+print("lalala")

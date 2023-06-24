@@ -1,6 +1,7 @@
 import numpy as np
 from statsmodels.base.model import Model
 
+
 vetor = np.array([11, 9, 8, 10, 10, 9, 7, 11, 11, 7, 6, 9, 10, 8, 10])
 
 
@@ -138,8 +139,8 @@ import statsmodels.api as sm
 from sklearn.linear_model import LinearRegression
 
 # Dados
-x = np.array([2, 3, 4, 5, 4, 6, 7, 8, 8, 10])
-y = np.array([48, 50, 56, 52, 43, 60, 62, 58, 64, 72])
+x = np.array([62, 74, 70, 98, 88, 80, 78, 67, 75, 86, 83, 78])
+y = np.array([515, 430, 475, 565, 620, 510, 495, 480, 555, 535, 470, 445])
 
 # Coeficiente de Pearson
 correlation_coef, _ = pearsonr(x, y)
@@ -147,7 +148,7 @@ print("Coeficiente de Pearson:", correlation_coef)
 
 # Equação de regressão linear
 slope, intercept, _, _, _ = linregress(x, y)
-regression_equation = f"y = {slope:.2f}x + {intercept:.2f}"
+regression_equation = f"y = {slope:.5f}x + {intercept:.5f}"
 print("Equação de regressão linear:", regression_equation)
 
 # Coeficiente de determinação (R²)
@@ -195,4 +196,4 @@ tamanho = x.shape[0]
 print(tamanho)
 denominador = tamanho - 2
 se = math.sqrt(soma / denominador)
-print("se: ", se)
+print("se (desvio padrao do erro): ", se)
